@@ -1,2 +1,2 @@
 # NEW
- All new Prjects
+ All new Projects
