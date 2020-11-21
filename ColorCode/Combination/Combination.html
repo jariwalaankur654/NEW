@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Colors</title>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+			font-family: verdana;	
+
+		}
+
+		body{
+			background: rgba(0,0,0,0.1);
+		}
+
+		h1,h6{
+			text-align: center;
+			margin-top: 10px;
+		}
+
+		.main
+		{
+			width: 100%;
+			height: auto;
+			
+		}
+
+		.container
+		{
+			display: block;
+			margin: 30px;
+			margin-left: auto; 
+			margin-right: auto; 
+			width: 750px;
+			height: 330px;
+			border: 1px solid black;
+			border-radius: 10px;
+			background: white;
+		}
+
+		.lastcontainer
+		{
+			display: block;
+			margin: 20px;
+			margin-left: auto; 
+			margin-right: auto; 
+			width: 100px;
+			height: 20px;
+			border: 1px solid black;
+			border-radius: 10px;
+			background: white;
+		}
+
+		a:link{							
+			margin-left: 30px;			
+		}
+
+		.left{
+			float: left;
+			width: 60%;
+			height: 100%;		
+		}
+
+		.left img
+		{
+			display: block;
+			margin-left: auto; 
+			margin-right: auto; 
+			height: 200px;
+			width: auto;
+			margin-top: 60px;
+		}
+
+		.right{
+			float: left;
+			width: 40%;
+			height: 100%;			
+		}
+
+		.right label{
+			padding-top: 15px;
+			display: block;
+			width: 100%;
+			text-align: center;			
+		}
+
+		.right .btn1
+		{
+			display: block;
+			margin: 16px;
+			margin-left: auto;
+			margin-right: auto;		
+			padding: 7px;
+			border: 1px solid white;
+		}
+
+		.right .btn-label
+		{
+			width: 10%;
+			display: block;
+			float: left;
+		}
+
+		.right .btn-label label
+		{
+			margin: 12px;
+			margin-left: auto;
+			margin-right: auto;		
+			padding: 7px;
+		}
+
+		.right .left-btn,.right .right-btn
+		{
+			width: 40%;
+			display: block;
+			float: left;
+
+		}
+
+		.right .btn2
+		{
+			display: block;
+			margin: 12px;
+			margin-left: auto;
+			margin-right: auto;		
+			padding: 7px;
+			border: 1px solid white;
+		}
+
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+	$(document).ready(function()
+	{
+	  $("button").click(function()
+	  {
+	  	var p = this.innerHTML;
+	 	var $temp = $("<input>");
+		$("body").append($temp);
+		$temp.val(p).select();
+		document.execCommand("copy");
+		$temp.remove();
+		alert("Copied "+p);
+	  });
+	});
+	</script>
+</head>
+<body>
+
+	<h1>COLORS</h1>
+	<h6>Click the button to get the hex code or RGB code of any particular beautifull colors.</h6>
+	<div class="main">
+
+		<div class="lastcontainer">							
+			<a href="../Main.html">BACK</a>				
+		</div>
+		
+		<div class="container">		
+			
+			<div class="left">
+				<img src="colorCombination_2.jpg">
+			</div>
+			
+			<div class="right">
+				
+				<label>Hex code :</label>
+				<button class="btn1" style="background-color: #5F4B8B; color: white;" >#5F4B8B</button>
+				<button class="btn1" style="background-color: #E69A8D; color: white;" >#E69A8D</button>				
+				
+				<label>RGB code :</label>
+				<div class="btn-label">
+					<label>R</label>
+					<label>G</label>
+					<label>B</label>
+				</div>
+
+				<div class="left-btn">
+					<button class="btn2" style="background-color: #5F4B8B; color: white;">95</button>
+					<button class="btn2" style="background-color: #5F4B8B; color: white;">75</button>
+					<button class="btn2" style="background-color: #5F4B8B; color: white;">139</button>
+				</div>
+
+				<div class="btn-label">
+					<label>R</label>
+					<label>G</label>
+					<label>B</label>
+				</div>
+
+				<div class="right-btn">
+					<button class="btn2" style="background-color: #E69A8D; color: white;">230</button>
+					<button class="btn2" style="background-color: #E69A8D; color: white;">154</button>
+					<button class="btn2" style="background-color: #E69A8D; color: white;">141</button>					
+				</div>
+
+			</div>
+		</div>
+
+		<div class="container">		
+			
+			<div class="left">
+				<img src="colorCombination_6.jpg">
+			</div>
+			
+			<div class="right">
+				
+				<label>Hex code :</label>
+				<button class="btn1" style="background-color: #00203F; color: white;" >#00203F</button>
+				<button class="btn1" style="background-color: #ADEFD1; color: white;" >#ADEFD1</button>				
+				
+				<label>RGB code :</label>
+				<div class="btn-label">
+					<label>R</label>
+					<label>G</label>
+					<label>B</label>
+				</div>
+
+				<div class="left-btn">
+					<button class="btn2" style="background-color: #00203F; color: white;">0</button>
+					<button class="btn2" style="background-color: #00203F; color: white;">32</button>
+					<button class="btn2" style="background-color: #00203F; color: white;">63</button>					
+				</div>
+
+				<div class="btn-label">
+					<label>R</label>
+					<label>G</label>
+					<label>B</label>
+				</div>
+
+				<div class="right-btn">
+					<button class="btn2" style="background-color: #ADEFD1; color: black;">173</button>
+					<button class="btn2" style="background-color: #ADEFD1; color: black;">239</button>
+					<button class="btn2" style="background-color: #ADEFD1; color: black;">209</button>
+				</div>
+
+			</div>
+		</div>
+		
+		<div class="container">		
+			
+			<div class="left">
+				<img src="colorCombination_9.jpg">
+			</div>
+			
+			<div class="right">
+				
+				<label>Hex code :</label>
+				<button class="btn1" style="background-color: #2C5F2D; color: white;">#2C5F2D</button>
+				<button class="btn1" style="background-color: #97BC62; color: white;">#97BC62</button>				
+				
+				<label>RGB code :</label>
+				<div class="btn-label">
+					<label>R</label>
+					<label>G</label>
+					<label>B</label>
+				</div>
+
+				<div class="left-btn">
+					<button class="btn2" style="background-color: #2C5F2D; color: white;">44</button>
+					<button class="btn2" style="background-color: #2C5F2D; color: white;">95</button>
+					<button class="btn2" style="background-color: #2C5F2D; color: white;">45</button>
+				</div>
+
+				<div class="btn-label">
+					<label>R</label>
+					<label>G</label>
+					<label>B</label>
+				</div>
+
+				<div class="right-btn">
+					<button class="btn2" style="background-color: #97BC62; color: white;">151</button>
+					<button class="btn2" style="background-color: #97BC62; color: white;">188</button>
+					<button class="btn2" style="background-color: #97BC62; color: white;">98</button>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="container">		
+			
+			<div class="left">
+				<img src="colorCombination_10.jpg">
+			</div>
+			
+			<div class="right">
+				
+				<label>Hex code :</label>
+				<button class="btn1" style="background-color: #00539C; color: white;">#00539C</button>
+				<button class="btn1" style="background-color: #EEA47F; color: white;">#EEA47F</button>				
+				
+				<label>RGB code :</label>
+				<div class="btn-label">
+					<label>R</label>
+					<label>G</label>
+					<label>B</label>
+				</div>
+
+				<div class="left-btn">
+					<button class="btn2" style="background-color: #00539C; color: white;">0</button>
+					<button class="btn2" style="background-color: #00539C; color: white;">83</button>
+					<button class="btn2" style="background-color: #00539C; color: white;">156</button>
+				</div>
+
+				<div class="btn-label">
+					<label>R</label>
+					<label>G</label>
+					<label>B</label>
+				</div>
+
+				<div class="right-btn">
+					<button class="btn2" style="background-color: #EEA47F; color: white;">238</button>				
+					<button class="btn2" style="background-color: #EEA47F; color: white;">164</button>				
+					<button class="btn2" style="background-color: #EEA47F; color: white;">127</button>				
+				</div>
+
+			</div>
+		</div>
+
+		<div class="container">		
+			
+			<div class="left">
+				<img src="colorCombination_11.jpg">
+			</div>
+			
+			<div class="right">
+				
+				<label>Hex code :</label>
+				<button class="btn1" style="background-color: #0063B2; color: white;">#0063B2</button>
+				<button class="btn1" style="background-color: #9CC3D5; color: white;">#9CC3D5</button>				
+				
+				<label>RGB code :</label>
+				<div class="btn-label">
+					<label>R</label>
+					<label>G</label>
+					<label>B</label>
+				</div>
+
+				<div class="left-btn">
+					<button class="btn2" style="background-color: #0063B2; color: white;">0</button>				
+					<button class="btn2" style="background-color: #0063B2; color: white;">99</button>				
+					<button class="btn2" style="background-color: #0063B2; color: white;">178</button>				
+					
+				</div>
+
+				<div class="btn-label">
+					<label>R</label>
+					<label>G</label>
+					<label>B</label>
+				</div>
+
+				<div class="right-btn">
+					<button class="btn2" style="background-color: #9CC3D5; color: white;">156</button>				
+					<button class="btn2" style="background-color: #9CC3D5; color: white;">195</button>				
+					<button class="btn2" style="background-color: #9CC3D5; color: white;">213</button>				
+				</div>
+
+			</div>
+		</div>
+
+		<div class="container">		
+			
+			<div class="left">
+				<img src="colorCombination_16.jpg">
+			</div>
+			
+			<div class="right">
+				
+				<label>Hex code :</label>
+				<button class="btn1" style="background-color: #89ABE3; color: black;">#89ABE3</button>
+				<button class="btn1" style="background-color: #FCF6F5; color: black;">#FCF6F5</button>				
+				
+				<label>RGB code :</label>
+				<div class="btn-label">
+					<label>R</label>
+					<label>G</label>
+					<label>B</label>
+				</div>
+
+				<div class="left-btn">
+					<button class="btn2" style="background-color: #89ABE3; color: black;">137</button>
+					<button class="btn2" style="background-color: #89ABE3; color: black;">171</button>
+					<button class="btn2" style="background-color: #89ABE3; color: black;">227</button>
+				</div>
+
+				<div class="btn-label">
+					<label>R</label>
+					<label>G</label>
+					<label>B</label>
+				</div>
+
+				<div class="right-btn">
+					<button class="btn2" style="background-color: #FCF6F5; color: black;">252</button>			
+					<button class="btn2" style="background-color: #FCF6F5; color: black;">246</button>			
+					<button class="btn2" style="background-color: #FCF6F5; color: black;">245</button>			
+				</div>
+
+			</div>
+		</div>
+		
+		<div class="container">		
+			
+			<div class="left">
+				<img src="colorCombination_18.jpg">
+			</div>
+			
+			<div class="right">
+				
+				<label>Hex code :</label>
+				<button class="btn1" style="background-color: #101820; color: white;">#101820</button>
+				<button class="btn1" style="background-color: #F2AA4C; color: white;">#F2AA4C</button>				
+				
+				<label>RGB code :</label>
+				<div class="btn-label">
+					<label>R</label>
+					<label>G</label>
+					<label>B</label>
+				</div>
+
+				<div class="left-btn">
+					<button class="btn2" style="background-color: #101820; color: white;">16</button>
+					<button class="btn2" style="background-color: #101820; color: white;">24</button>
+					<button class="btn2" style="background-color: #101820; color: white;">32</button>				
+				</div>
+
+				<div class="btn-label">
+					<label>R</label>
+					<label>G</label>
+					<label>B</label>
+				</div>
+
+				<div class="right-btn">
+					<button class="btn2" style="background-color: #F2AA4C; color: white;">242</button>				
+					<button class="btn2" style="background-color: #F2AA4C; color: white;">170</button>				
+					<button class="btn2" style="background-color: #F2AA4C; color: white;">76</button>				
+				</div>
+
+			</div>
+		</div>
+
+		<div class="container">		
+			
+			<div class="left">
+				<img src="colorCombination_22.jpg">
+			</div>
+			
+			<div class="right">
+				
+				<label>Hex code :</label>
+				<button class="btn1" style="background-color: #2BAE66; color: black;" >#2BAE66</button>
+				<button class="btn1" style="background-color: #FCF6F5; color: black;" >#FCF6F5</button>				
+				
+				<label>RGB code :</label>
+				<div class="btn-label">
+					<label>R</label>
+					<label>G</label>
+					<label>B</label>
+				</div>
+
+				<div class="left-btn">
+					<button class="btn2" style="background-color: #2BAE66; color: black;">43</button>
+					<button class="btn2" style="background-color: #2BAE66; color: black;">174</button>
+					<button class="btn2" style="background-color: #2BAE66; color: black;">102</button>					
+				</div>
+
+				<div class="btn-label">
+					<label>R</label>
+					<label>G</label>
+					<label>B</label>
+				</div>
+
+				<div class="right-btn">
+					<button class="btn2" style="background-color: #FCF6F5; color: black;">252</button>
+					<button class="btn2" style="background-color: #FCF6F5; color: black;">246</button>
+					<button class="btn2" style="background-color: #FCF6F5; color: black;">245</button>
+					
+				</div>
+
+			</div>
+		</div>
+
+		<div class="container">		
+			
+			<div class="left">
+				<img src="colorCombination_23.jpg">
+			</div>
+			
+			<div class="right">
+				
+				<label>Hex code :</label>
+				<button class="btn1" style="background-color: #FAD0C9; color: black;" >#FAD0C9</button>
+				<button class="btn1" style="background-color: #6E6E6D; color: white;" >#6E6E6D</button>				
+				
+				<label>RGB code :</label>
+				<div class="btn-label">
+					<label>R</label>
+					<label>G</label>
+					<label>B</label>
+				</div>
+
+				<div class="left-btn">
+					<button class="btn2" style="background-color: #FAD0C9; color: black;" >250</button>
+					<button class="btn2" style="background-color: #FAD0C9; color: black;" >208</button>
+					<button class="btn2" style="background-color: #FAD0C9; color: black;" >201</button>
+				</div>
+
+				<div class="btn-label">
+					<label>R</label>
+					<label>G</label>
+					<label>B</label>
+				</div>
+
+				<div class="right-btn">					
+					<button class="btn2" style="background-color: #6E6E6D; color: white;" >110</button>				
+					<button class="btn2" style="background-color: #6E6E6D; color: white;" >110</button>				
+					<button class="btn2" style="background-color: #6E6E6D; color: white;" >109</button>				
+				</div>
+
+			</div>
+		</div>
+		
+		<div class="container">		
+			
+			<div class="left">
+				<img src="colorCombination_25.jpg">
+			</div>
+			
+			<div class="right">
+				
+				<label>Hex code :</label>
+				<button class="btn1" style="background-color: #DAA03D; color: white;">#DAA03D</button>
+				<button class="btn1" style="background-color: #616247; color: white;">#616247</button>				
+				
+				<label>RGB code :</label>
+				<div class="btn-label">
+					<label>R</label>
+					<label>G</label>
+					<label>B</label>
+				</div>
+
+				<div class="left-btn">
+					<button class="btn2" style="background-color: #DAA03D; color: white;">218</button>
+					<button class="btn2" style="background-color: #DAA03D; color: white;">160</button>
+					<button class="btn2" style="background-color: #DAA03D; color: white;">61</button>
+				</div>
+
+				<div class="btn-label">
+					<label>R</label>
+					<label>G</label>
+					<label>B</label>
+				</div>
+
+				<div class="right-btn">					
+					<button class="btn2" style="background-color: #616247; color: white;">97</button>				
+					<button class="btn2" style="background-color: #616247; color: white;">98</button>				
+					<button class="btn2" style="background-color: #616247; color: white;">71</button>				
+				</div>
+
+			</div>
+		</div>
+
+		<div class="container">		
+			
+			<div class="left">
+				<img src="colorCombination_29.jpg">
+			</div>
+			
+			<div class="right">
+				
+				<label>Hex code :</label>
+				<button class="btn1" style="background-color: #FAEBEF; color: black;">#FAEBEF</button>
+				<button class="btn1" style="background-color: #333D79; color: white;">#333D79</button>				
+				
+				<label>RGB code :</label>
+				<div class="btn-label">
+					<label>R</label>
+					<label>G</label>
+					<label>B</label>
+				</div>
+
+				<div class="left-btn">
+					<button class="btn2" style="background-color: #FAEBEF; color: black;">250</button>				
+					<button class="btn2" style="background-color: #FAEBEF; color: black;">235</button>				
+					<button class="btn2" style="background-color: #FAEBEF; color: black;">239</button>				
+				</div>
+
+				<div class="btn-label">
+					<label>R</label>
+					<label>G</label>
+					<label>B</label>
+				</div>
+
+				<div class="right-btn">
+					<button class="btn2" style="background-color: #333D79; color: white;">51</button>				
+					<button class="btn2" style="background-color: #333D79; color: white;">61</button>				
+					<button class="btn2" style="background-color: #333D79; color: white;">121</button>				
+				</div>
+
+			</div>
+		</div>
+
+		<div class="container">		
+			
+			<div class="left">
+				<img src="colorCombination_32.jpg">
+			</div>
+			
+			<div class="right">
+				
+				<label>Hex code :</label>
+				<button class="btn1" style="background-color: #006B38; color: white;">#006B38</button>
+				<button class="btn1" style="background-color: #101820; color: white;">#101820</button>				
+				
+				<label>RGB code :</label>
+				<div class="btn-label">
+					<label>R</label>
+					<label>G</label>
+					<label>B</label>
+				</div>
+
+				<div class="left-btn">
+					<button class="btn2" style="background-color: #006B38; color: white;">0</button>
+					<button class="btn2" style="background-color: #006B38; color: white;">107</button>
+					<button class="btn2" style="background-color: #006B38; color: white;">56</button>
+				</div>
+
+				<div class="btn-label">
+					<label>R</label>
+					<label>G</label>
+					<label>B</label>
+				</div>
+
+				<div class="right-btn">
+					<button class="btn2" style="background-color: #101820; color: white;">16</button>				
+					<button class="btn2" style="background-color: #101820; color: white;">24</button>				
+					<button class="btn2" style="background-color: #101820; color: white;">32</button>				
+				</div>
+
+			</div>
+		</div>
+
+		<div class="container">		
+			
+			<div class="left">
+				<img src="colorCombination_35.jpg">
+			</div>
+			
+			<div class="right">
+				
+				<label>Hex code :</label>
+				<button class="btn1" style="background-color: #D7C49E; color: black;">#D7C49E</button>
+				<button class="btn1" style="background-color: #343148; color: white;">#343148</button>				
+				
+				<label>RGB code :</label>
+				<div class="btn-label">
+					<label>R</label>
+					<label>G</label>
+					<label>B</label>
+				</div>
+
+				<div class="left-btn">
+					<button class="btn2" style="background-color: #D7C49E; color: black;">215</button>
+					<button class="btn2" style="background-color: #D7C49E; color: black;">196</button>
+					<button class="btn2" style="background-color: #D7C49E; color: black;">158</button>
+				</div>
+
+				<div class="btn-label">
+					<label>R</label>
+					<label>G</label>
+					<label>B</label>
+				</div>
+
+				<div class="right-btn">
+					<button class="btn2" style="background-color: #343148; color: white;">52</button>				
+					<button class="btn2" style="background-color: #343148; color: white;">49</button>				
+					<button class="btn2" style="background-color: #343148; color: white;">72</button>				
+				</div>
+
+			</div>
+
+
+			
+		</div>
+
+		
+		
+
+
+	</div>
+</body>
+</html>

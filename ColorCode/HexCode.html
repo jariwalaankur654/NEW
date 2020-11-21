@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hex Color Code</title>
+
+	<style type="text/css">
+		#display{
+			height: 300px;
+			width: 300px;
+			background-color: rgb(0,0,0);			
+			margin-top: 60px;
+			border: 1px solid black;
+		}
+
+		h1{
+			font-size: 50px;
+			margin-bottom: 30px;	
+			text-shadow: 0 0 2px #000, 0 0 2px #000;
+		}
+
+		input{
+			height: 30px;
+			width: 90px;
+			text-align: center;
+			font-size: 20px;
+			margin-top: 30px; 
+		}
+
+		button{
+			height: 30px;
+			width: 90px;
+			text-align: center;
+			font-size: 20px;
+			margin-top: 30px; 			
+		}	
+	</style>
+
+	<script type="text/javascript">
+		function changeColor() {
+
+			var div = document.getElementById("display");
+			
+			var hexcode = document.getElementById("hexcode");
+
+			if(hexcode.value.length != 6)
+			{
+				hexcode.value = "000000";
+			}
+			else if(hexcode.value<0)
+			{
+				hexcode.value = "000000";
+			}
+			else
+			{
+				var arr = [];
+
+				var flag = 1;
+				
+				for(var i=0;i<6;i++)
+				{
+					if(hexcode.value[i]>='a' && hexcode.value[i]<='f')
+					{
+						var num = hexcode.value.charCodeAt(i) - 32;
+						var ch = String.fromCharCode(num);						
+						arr[i] = ch;
+					}
+					else if(hexcode.value[i]>='A' && hexcode.value[i]<='F')
+					{
+						arr[i] = hexcode.value[i];	
+					}
+					else if(hexcode.value[i]>='0' && hexcode.value[i]<='9')
+					{
+						arr[i] = hexcode.value[i];
+					}
+					else
+					{
+						hexcode.value = "000000";	
+						flag = 0;
+						break;
+					}					
+				}
+
+				if(flag)
+				{
+					hexcode.value = "";
+
+					for(var i=0;i<6;i++)
+					{				
+						hexcode.value += arr[i];
+					}
+				}
+			}
+
+
+			document.getElementById("h1").style.color = "#"+hexcode.value;
+
+			div.style.background = "#"+hexcode.value;
+		}
+	</script>
+</head>
+<body>
+
+	<center>
+		<table border="0">
+			<tr>
+				<td>
+					<center><h1 id="h1">HEX COLOR CODE</h1></center>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<center><h3>Press Enter After changing value</h3></center>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<center><input type="text" value="000000" id="hexcode" name="hexcode" maxlength="6" minlength="6" onchange="changeColor()"></center>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<center><div id="display"></div></center>
+				</td>
+			</tr>
+
+			<tr>
+				<td colspan="2">
+					<center>
+						<button><a href="Main.html">BACK</a></button>		
+					</center>
+				</td>
+			</tr>
+		</table>
+	</center>
+
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>RGB</title>
+
+	<style type="text/css">
+		#display{
+			background-color: rgb(0,0,0);			
+			height: 300px;
+			width: 300px;						
+			border: 1px solid black;
+			margin-top: 50px;
+		}
+
+		h1{
+			font-size: 50px;		
+			text-shadow: 0 0 2px #000, 0 0 2px #000;
+		}
+
+		h3{
+			margin-bottom: 30px;
+		}
+
+		label{
+			font-size: 25px;
+			margin-bottom: 10px;				
+		}
+
+		input{
+			height: 30px;
+			width: 90px;
+			text-align: center;
+			font-size: 20px;			
+		}
+
+		table tr td{
+			text-align: center;
+			font-weight: bold;
+		}
+
+		button{
+			margin-top: 20px;
+			height: 30px;
+			width: 90px;
+			text-align: center;
+			font-size: 20px;			
+		}
+
+	</style>
+
+	<script type="text/javascript">
+		function changeColor()
+		{
+			var arr = document.getElementsByTagName("input");
+			
+			var R = arr[0].value;
+			var G = arr[1].value;
+			var B = arr[2].value;
+
+			if(R<0 || R>255 || R=="")
+			{
+				arr[0].value = 0;
+				R = 0;
+			}
+
+			if(G<0 || G>255 || G=="")
+			{
+				arr[1].value = 0;
+				G = 0;
+			}
+
+			if(B<0 || B>255 || B=="")
+			{
+				arr[2].value = 0;
+				B = 0;
+			}
+
+			//alert(R+" "+G+" "+B);
+			var div = document.getElementById("display");
+			var h1 = document.getElementById("h1");
+			var thergb = "rgb(" + R + "," + G + "," + B + ")"; 
+			div.style.background = thergb;
+			h1.style.color = thergb;
+		}
+	</script>
+
+</head>
+<body>
+
+
+	<center>
+		<table border="0">
+			<tr>
+				<td colspan="2">
+					<h1 id="h1"><center>R G B</center></h1>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<h3>Press Enter After changing value</h3>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label style="color: #ff0000">RED</label>
+				</td>
+				<td>
+					<input onchange="changeColor()" min="0" max="255" type="number" name="RED" value="0">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label style="color: #00ff00">GREEN</label>
+				</td>
+				<td>
+					<input onchange="changeColor()" type="number" min="0" max="255" name="GREEN" value="0">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label style="color: #0000ff">BLUE</label>
+				</td>
+				<td>
+					<input onchange="changeColor()" type="number" name="BLUE" min="0" max="255" value="0">
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<div id="display">		
+					</div>
+				</td>
+			</tr>
+
+			<tr>
+				<td colspan="2">
+					<div>
+						<button><a href="Main.html">BACK</a></button>		
+					</div>
+				</td>
+			</tr>
+		</table>
+	</center>
+	
+</body>
+</html>
