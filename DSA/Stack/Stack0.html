@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Stack</title>
+	<style type="text/css">
+		#answer{
+			width: 100%;
+			height: 50px;
+		}
+	</style>
+</head>
+<body>
+	<h1 style="text-align: center;">STACK</h1>
+	<label>Size of Array : </label>
+	<input type="number" name="size_of_array" id="size_of_array">
+	<br>
+	<br>
+	<input type="number" name="value" id="value">
+	<button onclick="PUSH()">PUSH</button>	
+	<button onclick="POP()">POP</button>
+
+	<br>
+	<br>
+	<div id="valueoftop">
+		TOP : -1
+	</div>
+
+	<br>
+	<label>STACK : </label>
+	<div id="stack_state" style="padding: 10px;">
+		
+	</div>
+	
+	<div id="answer">
+	</div>
+
+	</div>
+
+	<br>
+	<label style="float: none;">POP Element : </label>
+	<div id="pop_element" style="padding: 10px;">
+		
+	</div>
+
+	<script type="text/javascript">
+		
+		var arr = new Array();
+
+		var	t = -1;
+
+		function PUSH()
+		{
+			
+			var size_of_array =  document.getElementById("size_of_array").value;
+			if(t == size_of_array-1)
+			{				
+				document.getElementById("stack_state").innerHTML = "Stack Overflow";
+			}
+			else
+			{
+				document.getElementById("stack_state").innerHTML = "";
+				var x = document.getElementById("value").value;
+				t = t + 1;
+				arr[t] = x;
+				var div_parent = document.getElementById("answer");
+				var div_child = document.createElement("DIV");
+				div_child.style.float = "left";
+				div_child.style.padding = "10px";
+				div_parent.appendChild(div_child);
+				div_child.innerHTML = x;
+				document.getElementById("valueoftop").innerHTML = "TOP : "+t;
+			}	
+		}
+
+		function POP()
+		{
+			if(t == -1)
+			{				
+				document.getElementById("stack_state").innerHTML = "Stack Underflow";
+			}
+			else
+			{				
+				document.getElementById("stack_state").innerHTML = "";
+				var x = arr[t];
+				t = t - 1;	
+				var div_parent = document.getElementById("answer");
+				var div_child = div_parent.lastChild;				
+				div_parent.removeChild(div_child);			
+				document.getElementById("valueoftop").innerHTML = "TOP : "+t;	
+
+				var div_parent1 = document.getElementById("pop_element");
+				var div_child1 = document.createElement("DIV");
+				div_child1.style.float = "left";
+				div_child1.style.padding = "10px";
+				div_parent1.appendChild(div_child1);
+				div_child1.innerHTML = x;
+			}
+		}
+
+	</script>
+</body>
+</html>

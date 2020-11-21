@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Queue</title>
+	<style type="text/css">		
+		#answer{
+			width: 100%;
+			height: 50px;
+		}
+	
+	</style>
+</head>
+<body>
+	<h1 style="text-align: center;">QUEUE</h1>
+	<label>Size of Array : </label>
+	<input type="number" name="size_of_array" id="size_of_array">
+	<br>
+	<br>
+	<input type="number" name="value" id="value">
+	<button onclick="ENQUEUE()">ENQUEUE</button>	
+	<button onclick="DEQUEUE()">DEQUEUE</button>
+
+	<br>
+	<br>
+	<div id="valueofF">
+		F : -1	
+	</div>
+	<div id="valueofR">
+		R : -1	
+	</div>
+
+	<br>
+	<label>QUEUE : </label>
+	<div id="queue_state" style="padding: 10px;">
+		
+	</div>
+	
+	<div id="answer">
+	</div>
+
+	</div>
+
+	<br>
+	<label style="float: none;">DEQUEUE Element : </label>
+	<div id="dequeue_element" style="padding: 10px;">
+		
+	</div>
+
+	<script type="text/javascript">
+		
+		var arr = new Array();
+
+		var	F = -1;
+		var	R = -1;
+
+		function ENQUEUE()
+		{
+			var size_of_array =  document.getElementById("size_of_array").value;
+			if(F == -1)
+			{
+				F = 0;
+			}	
+			
+			if(R == size_of_array-1)
+			{
+				
+				document.getElementById("queue_state").innerHTML = "Queue is Full.";
+			}
+			else
+			{
+				document.getElementById("queue_state").innerHTML = "";
+				R++;
+				var x = document.getElementById("value").value;
+				arr[R] = x;
+				
+
+				var div_parent = document.getElementById("answer");
+				var div_child = document.createElement("DIV");
+				div_child.style.float = "left";
+				div_child.style.padding = "10px";
+				div_parent.appendChild(div_child);
+				div_child.innerHTML = x;
+			}
+
+			document.getElementById("valueofR").innerHTML = "R : "+R;
+			document.getElementById("valueofF").innerHTML = "F : "+F;
+
+		}
+
+		function DEQUEUE()
+		{
+			var size_of_array =  document.getElementById("size_of_array").value;
+			
+			if(F == -1) 
+			{
+				
+				document.getElementById("queue_state").innerHTML = "Queue is Empty.";
+			}			
+			else
+			{
+				document.getElementById("queue_state").innerHTML = "";
+				var x = arr[F];
+				F++;	
+				
+				var div_parent1 = document.getElementById("dequeue_element");
+				var div_child1 = document.createElement("DIV");
+				div_child1.style.float = "left";
+				div_child1.style.padding = "10px";
+				div_parent1.appendChild(div_child1);
+				div_child1.innerHTML = x;
+
+				var div_parent = document.getElementById("answer");	
+				div_parent.removeChild(div_parent.childNodes[1]);			
+			}		
+
+			if(F == R+1)
+			{
+				F = R = -1;
+			}	
+
+			document.getElementById("valueofR").innerHTML = "R : "+R;
+			document.getElementById("valueofF").innerHTML = "F : "+F;
+		}
+
+	</script>
+</body>
+</html>

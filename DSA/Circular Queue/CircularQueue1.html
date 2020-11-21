@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Circular Queue</title>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+
+		#titeofpage{
+			font-size: 75px;
+			margin-left: 10px;
+		}
+
+		#main{
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 15px;
+			width: 1400px;
+			height: 600px;
+			border: 1px solid black;
+		}
+
+		#main1{
+			display: block;
+			height: 580px;
+			width: 279px;			
+			float: left;
+			border-right: 1px solid black;
+			padding: 10px;
+		}
+
+		#main1 label{
+			margin-top: 30px;
+			font-size: 30px;
+			display: block;
+			text-align: center;
+		}
+
+		#main1 input{
+			display: block;
+			margin-top: 10px;
+			width: 240px;
+			height: 30px;
+			margin-left: auto;
+			margin-right: auto;
+			padding: 5px;			
+		}
+
+		#main1 button{
+			display: block;
+			margin-top: 10px;
+			width: 240px;
+			height: 30px;
+			margin-left: auto;
+			margin-right: auto;
+			padding: 7px;			
+		}
+
+		#main2{
+			display: block;
+			height: 600px;
+			width: 549px;
+			float: left;
+			border-right: 1px solid black;
+		}
+
+		#main3{
+			display: block;
+			height: 42.4px;
+			width: 530px;
+			float: left;
+			padding: 10px;
+		}
+
+		#main3 #label1{
+			float: left;
+			padding: 10px;
+			font-size: 20px;
+		}
+
+		#main3 #valueofR, #main3 #valueofF{
+			float: left;			
+			padding: 10px;
+			padding-left: 10px;
+			padding-right: 10px;
+			font-size: 20px;		
+		}
+
+		#main3 #label2{
+			float: right;
+			padding: 10px;
+			font-size: 20px;
+		}
+
+		#main3 #queue_state{
+			float: right;			
+			padding: 10px;
+			padding-left: 10px;
+			padding-right: 10px;
+			font-size: 20px;		
+		}		
+
+		#main4{
+			border-top: 1px solid black;
+			display: block;
+			height: 159px;
+			width: 530px;
+			float: left;
+			padding: 10px;
+		}
+
+		#main4 label{	
+			display: block;		
+			padding: 10px;			
+			font-size: 20px;
+		}
+
+		#main4 #dequeue_element{		
+			padding: 10px;			
+			font-size: 20px;
+		}
+
+		#main5{
+			border-top: 1px solid black;
+			display: block;
+			height: 356.6px;
+			width: 274px;
+			float: left;
+			border-right: 1px solid black;
+		}
+
+		#main5 label,#main6 label{
+			display: block;
+			margin-left: auto;
+			margin-right: auto; 
+			font-size: 18px;
+			padding: 7px;
+		}
+
+		#main5 ul,#main6 ul{
+			list-style: none;
+			padding-left: 20px;
+		}
+
+		#main6{
+			border-top: 1px solid black;
+			display: block;
+			height: 356.6px;
+			width: 275px;
+			float: left;
+		}
+
+	</style>
+</head>
+<body>
+	
+	<h1 id="titeofpage">CIRCULAR QUEUE</h1>
+
+	<div id="main">
+		
+		<div id="main1">
+			<label>Size of Array</label>
+			<input type="number" id="size" onchange="createCircle()">	
+			<br><br><br>
+			<label>ENQUEUE</label>
+			<input type="number" id="value">
+			<button onclick="ENQUEUE()">ENQUEUE</button>	
+			<br><br><br>
+			<label>DEQUEUE</label>			
+			<button onclick="DEQUEUE()">DEQUEUE</button>	
+		</div>
+
+		<div id="main2">
+			<canvas id="StackCanvas" width="549" height="600">
+			</canvas>
+		</div>
+		
+		<div id="main3">
+			<label id="label1">F : </label>
+			<div id="valueofF">-1</div>
+			<label id="label1">R : </label>
+			<div id="valueofR">-1</div>
+			
+			<div id="queue_state">ALL GOOD</div>
+			<label id="label2">STATUS : </label>
+		</div>
+
+		<div id="main4">
+			<label>DEQUEUE ELEMENTS : </label>
+			<div id="dequeue_element"></div>
+		</div>		
+
+		<div id="main5">
+			<label>ENQUEUE</label>
+			<ul id="enqueue_list">
+				<li>var size</li>
+				<li>var arr[size]  //Array Implementation</li>
+				<li>var F = -1</li>
+				<li>var R = -1</li>
+				<li>var x</li>				
+				<li>function ENQUEUE() { </li>				
+				<li>&nbsp &nbsp if((R == size-1 && F == 0) || (R == (F+1)%(size-1))) {</li>				
+				<li>&nbsp &nbsp print("QUEUE IS FULL")</li>
+				<li>&nbsp &nbsp }</li>
+				<li>&nbsp &nbsp else if(F == -1) {</li>				
+				<li>&nbsp &nbsp &nbsp &nbsp F = R = 0</li>
+				<li>&nbsp &nbsp &nbsp &nbsp arr[R] = x</li>
+				<li>&nbsp &nbsp }</li>
+				<li>&nbsp &nbsp if(R == size-1 && F != 0) {</li>	
+				<li>&nbsp &nbsp &nbsp &nbsp R = 0</li>
+				<li>&nbsp &nbsp &nbsp &nbsp arr[R] = x</li>
+				<li>&nbsp &nbsp }</li>
+				<li>&nbsp &nbsp else {</li>				
+				<li>&nbsp &nbsp &nbsp &nbsp R = R + 1</li>
+				<li>&nbsp &nbsp &nbsp &nbsp arr[R] = x</li>
+				<li>&nbsp &nbsp }</li>
+				<li>}</li>
+			</ul>
+		</div>	
+
+		<div id="main6">
+			<label>DEQUEUE</label>
+			<ul id="dequeue_list">
+				<li>var size</li>
+				<li>var arr[size]  //Array Implementation</li>
+				<li>var F = -1</li>
+				<li>var R = -1</li>				
+				<li>function DEQUEUE() { </li>				
+				<li>&nbsp &nbsp if(F == -1) {</li>				
+				<li>&nbsp &nbsp print("QUEUE IS EMPTY")</li>
+				<li>&nbsp &nbsp }</li>
+				<li>&nbsp &nbsp else {</li>				
+				<li>&nbsp &nbsp &nbsp &nbsp x = arr[R]</li>			
+				<li>&nbsp &nbsp }</li>
+				<li>&nbsp &nbsp </li>
+				<li>&nbsp &nbsp if(F == R) {</li>				
+				<li>&nbsp &nbsp &nbsp &nbsp F = R = -1</li>
+				<li>&nbsp &nbsp }</li>
+				<li>&nbsp &nbsp else if(F == size-1){</li>			
+				<li>&nbsp &nbsp &nbsp &nbsp F = 0</li>			
+				<li>&nbsp &nbsp }</li>
+				<li>&nbsp &nbsp else {</li>				
+				<li>&nbsp &nbsp &nbsp &nbsp F = F + 1</li>			
+				<li>&nbsp &nbsp }</li>
+				<li>}</li>
+			</ul>
+		</div>	
+
+	</div>
+	<script src="CircularQueue1.js"></script>
+</body>
+</html>
